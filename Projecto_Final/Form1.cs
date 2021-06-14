@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 
-namespace AulaHeranca
+namespace ProjectoFinal
 {
     public partial class Form1 : Form
     {
@@ -34,31 +34,31 @@ namespace AulaHeranca
             }
             sr.Close();
 
-            sr = new StreamReader("Funcionarios.txt");
-            linha = sr.ReadLine();
+            //sr = new StreamReader("Funcionarios.txt");
+            //linha = sr.ReadLine();
 
-            while (linha != null)
-            {
-                auxLinha = linha.Split(';');
+            //while (linha != null)
+            //{
+                //auxLinha = linha.Split(';');
 
-                comboBoxFunc.Items.Add(new Funcionario(auxLinha[0], auxLinha[1], auxLinha[2], int.Parse(auxLinha[3]), int.Parse(auxLinha[4]), int.Parse(auxLinha[5]), auxLinha[6], double.Parse(auxLinha[7])));
+                //comboBoxFunc.Items.Add(new Funcionario(auxLinha[0], auxLinha[1], auxLinha[2], int.Parse(auxLinha[3]), int.Parse(auxLinha[4]), int.Parse(auxLinha[5]), auxLinha[6], double.Parse(auxLinha[7])));
 
-                linha = sr.ReadLine();
-            }
-            sr.Close();
+                //linha = sr.ReadLine();
+            //}
+            //sr.Close();
 
-            sr = new StreamReader("Clientes.txt");
-            linha = sr.ReadLine();
+            //sr = new StreamReader("Clientes.txt");
+            //linha = sr.ReadLine();
 
-            while (linha != null)
-            {
-                auxLinha = linha.Split(';');
+            //while (linha != null)
+            //{
+                //auxLinha = linha.Split(';');
 
-                comboBoxClie.Items.Add(new Cliente(auxLinha[0], auxLinha[1], auxLinha[2], int.Parse(auxLinha[3]), int.Parse(auxLinha[4]), int.Parse(auxLinha[5]), auxLinha[6]));
+                //comboBoxClie.Items.Add(new Cliente(auxLinha[0], auxLinha[1], auxLinha[2], int.Parse(auxLinha[3]), int.Parse(auxLinha[4]), int.Parse(auxLinha[5]), auxLinha[6]));
 
-                linha = sr.ReadLine();
-            }
-            sr.Close();
+                //linha = sr.ReadLine();
+            //}
+            //sr.Close();
 
             toolStripStatusLabel1.Text = DateTime.Now.ToString("HH:mm:ss");
         }

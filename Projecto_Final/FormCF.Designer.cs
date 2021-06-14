@@ -1,4 +1,4 @@
-﻿namespace AulaHeranca
+﻿namespace ProjectoFinal
 {
     partial class FormCF
     {
