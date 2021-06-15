@@ -8,48 +8,37 @@ namespace ProjectoFinal
 {
     class Cliente : Pessoa
     {
-        private string tipo;
-        private List<Produto> produtosFav;
+        private List<Games> produtosFav;
 
         public Cliente()
         {
-            tipo = "";
-            produtosFav = new List<Produto>();
+            produtosFav = new List<Games>();
         }
-        public Cliente(string nNome, string nEmail, string nCidade, int nDia, int nMes, int nAno, string nTipo)
+        public Cliente(string nNome, string nEmail, string nCidade, int nDia, int nMes, int nAno)
         {
             SetNome(nNome);
             SetEmail(nEmail);
             SetCidade(nCidade);
             SetDataNasc(nDia,nMes,nAno);
-            tipo = nTipo;
-            produtosFav = new List<Produto>();
+            produtosFav = new List<Games>();
         }
 
-        public void SetTipo(string nTipo)
-        {
-            tipo = nTipo;
-        }
-        public string GetTipo()
-        {
-            return tipo;
-        }
-        public List<Produto> GetProdutosFav()
+        public List<Games> GetProdutosFav()
         {
             return produtosFav;
         }
-        public void AdicionarProdFav(Produto p)
+        public void AdicionarProdFav(Games p)
         {
             produtosFav.Add(p);
         }
 
         public string TextoFicheiro()
         {
-            return GetNome() + ";" + GetEmail() + ";" + GetCidade() + ";" + GetDataNasc().GetDia().ToString() + ";" + GetDataNasc().GetMes().ToString() + ";" + GetDataNasc().GetAno().ToString() + ";" + tipo;
+            return GetNome() + ";" + GetEmail() + ";" + GetCidade() + ";" + GetDataNasc().GetDia().ToString() + ";" + GetDataNasc().GetMes().ToString() + ";" + GetDataNasc().GetAno().ToString();
         }
         public override string ToString()
         {
-            return GetNome() + " - " + tipo;
+            return GetNome();
         }
     }
 }

@@ -6,38 +6,54 @@ using System.Threading.Tasks;
 
 namespace ProjectoFinal
 {
-    class Produto
+    class Games
     {
+        private string UID;
         private string nome;
         private double preco;
 
-        public Produto()
+        public Games()
         {
+            UID = "";
             nome = "";
             preco = 0;
         }
-        public Produto(string nNome, double nPreco)
+        public Games(string nUID,string nNome, double nPreco)
         {
+            UID = nUID;
             nome = nNome;
             preco = nPreco;
+        }
+
+        public void SetUID(string nUID)
+        {
+            UID = nUID;
+        }
+        public string GetUID()
+        {
+            return UID;
         }
 
         public void SetNome(string nNome)
         {
             nome = nNome;
         }
+
         public string GetNome()
         {
             return nome;
         }
+
         public void SetPreco(double nPreco)
         {
             preco = nPreco;
         }
+
         public void SetPreco(string nPreco)
         {
             preco = double.Parse(nPreco);
         }
+
         public double GetPreco()
         {
             return preco;

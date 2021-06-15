@@ -32,10 +32,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.userToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.adicionarClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.adicionarFuncionárioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.label1 = new System.Windows.Forms.Label();
-            this.comboBoxFunc = new System.Windows.Forms.ComboBox();
             this.comboBoxClie = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.listBoxProdutos = new System.Windows.Forms.ListBox();
@@ -53,7 +50,6 @@
             this.menuStrip1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
-            this.panelCBCliente.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -70,8 +66,7 @@
             // userToolStripMenuItem
             // 
             this.userToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.adicionarClienteToolStripMenuItem,
-            this.adicionarFuncionárioToolStripMenuItem});
+            this.adicionarClienteToolStripMenuItem});
             this.userToolStripMenuItem.Name = "userToolStripMenuItem";
             this.userToolStripMenuItem.Size = new System.Drawing.Size(42, 20);
             this.userToolStripMenuItem.Text = "User";
@@ -79,16 +74,9 @@
             // adicionarClienteToolStripMenuItem
             // 
             this.adicionarClienteToolStripMenuItem.Name = "adicionarClienteToolStripMenuItem";
-            this.adicionarClienteToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
+            this.adicionarClienteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.adicionarClienteToolStripMenuItem.Text = "Adicionar Cliente";
             this.adicionarClienteToolStripMenuItem.Click += new System.EventHandler(this.adicionarClienteToolStripMenuItem_Click);
-            // 
-            // adicionarFuncionárioToolStripMenuItem
-            // 
-            this.adicionarFuncionárioToolStripMenuItem.Name = "adicionarFuncionárioToolStripMenuItem";
-            this.adicionarFuncionárioToolStripMenuItem.Size = new System.Drawing.Size(191, 22);
-            this.adicionarFuncionárioToolStripMenuItem.Text = "Adicionar Funcionário";
-            this.adicionarFuncionárioToolStripMenuItem.Click += new System.EventHandler(this.adicionarFuncionárioToolStripMenuItem_Click);
             // 
             // aboutToolStripMenuItem
             // 
@@ -97,30 +85,11 @@
             this.aboutToolStripMenuItem.Text = "About";
             this.aboutToolStripMenuItem.Click += new System.EventHandler(this.aboutToolStripMenuItem_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(26, 36);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(96, 20);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Funcionário:";
-            // 
-            // comboBoxFunc
-            // 
-            this.comboBoxFunc.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBoxFunc.FormattingEnabled = true;
-            this.comboBoxFunc.Location = new System.Drawing.Point(30, 59);
-            this.comboBoxFunc.Name = "comboBoxFunc";
-            this.comboBoxFunc.Size = new System.Drawing.Size(336, 28);
-            this.comboBoxFunc.TabIndex = 2;
-            // 
             // comboBoxClie
             // 
             this.comboBoxClie.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxClie.FormattingEnabled = true;
-            this.comboBoxClie.Location = new System.Drawing.Point(5, 7);
+            this.comboBoxClie.Location = new System.Drawing.Point(25, 59);
             this.comboBoxClie.Name = "comboBoxClie";
             this.comboBoxClie.Size = new System.Drawing.Size(336, 28);
             this.comboBoxClie.TabIndex = 4;
@@ -130,7 +99,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(26, 102);
+            this.label2.Location = new System.Drawing.Point(23, 31);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(62, 20);
             this.label2.TabIndex = 3;
@@ -141,9 +110,9 @@
             this.listBoxProdutos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBoxProdutos.FormattingEnabled = true;
             this.listBoxProdutos.ItemHeight = 20;
-            this.listBoxProdutos.Location = new System.Drawing.Point(30, 192);
+            this.listBoxProdutos.Location = new System.Drawing.Point(27, 134);
             this.listBoxProdutos.Name = "listBoxProdutos";
-            this.listBoxProdutos.Size = new System.Drawing.Size(336, 344);
+            this.listBoxProdutos.Size = new System.Drawing.Size(336, 404);
             this.listBoxProdutos.TabIndex = 5;
             this.listBoxProdutos.DoubleClick += new System.EventHandler(this.listBoxProdutos_DoubleClick);
             // 
@@ -164,7 +133,7 @@
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.removerToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 48);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(122, 26);
             this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
             // 
             // removerToolStripMenuItem
@@ -178,7 +147,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(26, 169);
+            this.label3.Location = new System.Drawing.Point(21, 111);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(77, 20);
             this.label3.TabIndex = 7;
@@ -227,8 +196,7 @@
             // 
             // panelCBCliente
             // 
-            this.panelCBCliente.Controls.Add(this.comboBoxClie);
-            this.panelCBCliente.Location = new System.Drawing.Point(25, 120);
+            this.panelCBCliente.Location = new System.Drawing.Point(20, 52);
             this.panelCBCliente.Name = "panelCBCliente";
             this.panelCBCliente.Size = new System.Drawing.Size(346, 41);
             this.panelCBCliente.TabIndex = 11;
@@ -248,6 +216,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(765, 580);
+            this.Controls.Add(this.comboBoxClie);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panelCBCliente);
             this.Controls.Add(this.statusStrip1);
@@ -257,8 +226,6 @@
             this.Controls.Add(this.listBoxCarrinho);
             this.Controls.Add(this.listBoxProdutos);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.comboBoxFunc);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
@@ -269,7 +236,6 @@
             this.contextMenuStrip1.ResumeLayout(false);
             this.statusStrip1.ResumeLayout(false);
             this.statusStrip1.PerformLayout();
-            this.panelCBCliente.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -278,8 +244,6 @@
         #endregion
 
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBoxFunc;
         private System.Windows.Forms.ComboBox comboBoxClie;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ListBox listBoxProdutos;
@@ -288,7 +252,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ToolStripMenuItem userToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem adicionarClienteToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem adicionarFuncionárioToolStripMenuItem;
         private System.Windows.Forms.Label labelValor;
         private System.Windows.Forms.ToolStripMenuItem aboutToolStripMenuItem;
         private System.Windows.Forms.StatusStrip statusStrip1;

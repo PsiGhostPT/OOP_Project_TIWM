@@ -81,9 +81,8 @@
     <Compile Include="FormCF.Designer.cs">
       <DependentUpon>FormCF.cs</DependentUpon>
     </Compile>
-    <Compile Include="Funcionario.cs" />
     <Compile Include="Pessoa.cs" />
-    <Compile Include="Produto.cs" />
+    <Compile Include="Games.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AboutBox1.resx">

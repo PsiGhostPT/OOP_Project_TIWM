@@ -4,7 +4,6 @@ D:\#Estudos\#HiddenLab\TIWM\Year1\OOP\Projecto_Final\obj\Debug\Projecto_Final.cs
 D:\#Estudos\POO\OOP_Project_TIWM\Projecto_Final\bin\Debug\ProjectoFinal.exe.config
 D:\#Estudos\POO\OOP_Project_TIWM\Projecto_Final\bin\Debug\ProjectoFinal.exe
 D:\#Estudos\POO\OOP_Project_TIWM\Projecto_Final\bin\Debug\ProjectoFinal.pdb
-D:\#Estudos\POO\OOP_Project_TIWM\Projecto_Final\obj\Debug\Projecto_Final.csprojAssemblyReference.cache
 D:\#Estudos\POO\OOP_Project_TIWM\Projecto_Final\obj\Debug\ProjectoFinal.AboutBox1.resources
 D:\#Estudos\POO\OOP_Project_TIWM\Projecto_Final\obj\Debug\ProjectoFinal.Form1.resources
 D:\#Estudos\POO\OOP_Project_TIWM\Projecto_Final\obj\Debug\ProjectoFinal.FormCF.resources
@@ -13,3 +12,4 @@ D:\#Estudos\POO\OOP_Project_TIWM\Projecto_Final\obj\Debug\Projecto_Final.csproj.
 D:\#Estudos\POO\OOP_Project_TIWM\Projecto_Final\obj\Debug\Projecto_Final.csproj.CoreCompileInputs.cache
 D:\#Estudos\POO\OOP_Project_TIWM\Projecto_Final\obj\Debug\ProjectoFinal.exe
 D:\#Estudos\POO\OOP_Project_TIWM\Projecto_Final\obj\Debug\ProjectoFinal.pdb
+D:\#Estudos\POO\OOP_Project_TIWM\Projecto_Final\obj\Debug\Projecto_Final.csproj.AssemblyReference.cache

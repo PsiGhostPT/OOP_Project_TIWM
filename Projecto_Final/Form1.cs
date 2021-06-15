@@ -28,37 +28,24 @@ namespace ProjectoFinal
             {
                 auxLinha = linha.Split('|');
 
-                listBoxProdutos.Items.Add(new Produto(auxLinha[0], double.Parse(auxLinha[1])));
+                listBoxProdutos.Items.Add(new Games(auxLinha[0], double.Parse(auxLinha[1])));
 
                 linha = sr.ReadLine();
             }
             sr.Close();
 
-            //sr = new StreamReader("Funcionarios.txt");
-            //linha = sr.ReadLine();
+            sr = new StreamReader("Clientes.txt");
+            linha = sr.ReadLine();
 
-            //while (linha != null)
-            //{
-                //auxLinha = linha.Split(';');
+            while (linha != null)
+            {
+                auxLinha = linha.Split(';');
 
-                //comboBoxFunc.Items.Add(new Funcionario(auxLinha[0], auxLinha[1], auxLinha[2], int.Parse(auxLinha[3]), int.Parse(auxLinha[4]), int.Parse(auxLinha[5]), auxLinha[6], double.Parse(auxLinha[7])));
+                comboBoxClie.Items.Add(new Cliente(auxLinha[0], auxLinha[1], auxLinha[2], int.Parse(auxLinha[3]), int.Parse(auxLinha[4]), int.Parse(auxLinha[5])));
 
-                //linha = sr.ReadLine();
-            //}
-            //sr.Close();
-
-            //sr = new StreamReader("Clientes.txt");
-            //linha = sr.ReadLine();
-
-            //while (linha != null)
-            //{
-                //auxLinha = linha.Split(';');
-
-                //comboBoxClie.Items.Add(new Cliente(auxLinha[0], auxLinha[1], auxLinha[2], int.Parse(auxLinha[3]), int.Parse(auxLinha[4]), int.Parse(auxLinha[5]), auxLinha[6]));
-
-                //linha = sr.ReadLine();
-            //}
-            //sr.Close();
+                linha = sr.ReadLine();
+            }
+            sr.Close();
 
             toolStripStatusLabel1.Text = DateTime.Now.ToString("HH:mm:ss");
         }
@@ -67,7 +54,7 @@ namespace ProjectoFinal
         {
             if(listBoxProdutos.SelectedItem != null)
             {
-                Produto pSelect = listBoxProdutos.SelectedItem as Produto;
+                Games pSelect = listBoxProdutos.SelectedItem as Games;
 
                 listBoxCarrinho.Items.Add(pSelect);
                 AtualizarValorCarrinho();
@@ -104,36 +91,19 @@ namespace ProjectoFinal
 
             panelCBCliente.BackColor = Color.Transparent;
 
-            foreach (Produto p in listBoxCarrinho.Items)
+            foreach (Games p in listBoxCarrinho.Items)
             {
                 valor += p.GetPreco();
             }
-
-            string tipo = "";
             
             if(comboBoxClie.SelectedItem != null)
             {
-                tipo = (comboBoxClie.SelectedItem as Cliente).GetTipo();
+                labelValor.Text = "Total: " + valor + "€";
             }
-
-
-            switch (tipo)
+            else
             {
-                case "Normal":
-                    labelValor.Text = "Total: " + valor + "€";
-                    break;
-                case "Silver":
-                    valorDeconto = valor * 0.9;
-                    labelValor.Text = "Total: " + valor + "€   Total c/ desconto: " + valorDeconto + "€";
-                    break;
-                case "Gold":
-                    valorDeconto = valor * 0.85;
-                    labelValor.Text = "Total: " + valor + "€   Total c/ desconto: " + valorDeconto + "€";
-                    break;
-                default:
-                    labelValor.Text = "Inserir cliente para calcular o total.";
-                    panelCBCliente.BackColor = Color.Red;
-                    break;
+                labelValor.Text = "Inserir cliente para calcular o total.";
+                panelCBCliente.BackColor = Color.Red;
             }
         }
 
