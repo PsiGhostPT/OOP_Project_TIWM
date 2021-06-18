@@ -27,14 +27,14 @@ namespace ProjectoFinal
         {
             return produtosFav;
         }
-        public void AdicionarProdFav(Games p)
+        public void AdicionarProdFav(Games g)
         {
-            produtosFav.Add(p);
+            produtosFav.Add(g);
         }
 
         public string TextoFicheiro()
         {
-            return GetNome() + ";" + GetEmail() + ";" + GetCidade() + ";" + GetDataNasc().GetDia().ToString() + ";" + GetDataNasc().GetMes().ToString() + ";" + GetDataNasc().GetAno().ToString();
+            return GetNome() + ";" + GetEmail() + ";" + GetCidade() + ";" + GetDataNasc().GetDia().ToString() + ";" + GetDataNasc().GetMes().ToString() + ";" + GetDataNasc().GetAno().ToString() + ";" + GetProdutosFav().ToString();
         }
         public override string ToString()
         {

@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace ProjectoFinal
 {
-    partial class AboutBox1 : Form
+    partial class AboutBox : Form
     {
-        public AboutBox1()
+        public AboutBox()
         {
             InitializeComponent();
             this.Text = String.Format("About {0}", AssemblyTitle);
@@ -105,6 +105,11 @@ namespace ProjectoFinal
         private void okButton_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void okButton_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }
