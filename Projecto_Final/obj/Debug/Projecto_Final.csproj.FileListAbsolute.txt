@@ -11,9 +11,13 @@ D:\#Estudos\POO\OOP_Project_TIWM\Projecto_Final\obj\Debug\ProjectoFinal.exe
 D:\#Estudos\POO\OOP_Project_TIWM\Projecto_Final\obj\Debug\ProjectoFinal.pdb
 D:\#Estudos\POO\OOP_Project_TIWM\Projecto_Final\obj\Debug\Projecto_Final.csproj.AssemblyReference.cache
 D:\#Estudos\POO\OOP_Project_TIWM\Projecto_Final\obj\Debug\ProjectoFinal.AboutBox.resources
-D:\#Estudos\POO\OOP_Project_TIWM\Projecto_Final\obj\Debug\ProjectoFinal.Add.resources
 D:\#Estudos\POO\OOP_Project_TIWM\Projecto_Final\obj\Debug\ProjectoFinal.Show.resources
-D:\#Estudos\POO\OOP_Project_TIWM\Projecto_Final\obj\Debug\ProjectoFinal.FormC.resources
-D:\#Estudos\POO\OOP_Project_TIWM\Projecto_Final\obj\Debug\ProjectoFinal.Form1.resources
-D:\#Estudos\POO\OOP_Project_TIWM\Projecto_Final\obj\Debug\ProjectoFinal.FormCM.resources
 D:\#Estudos\POO\OOP_Project_TIWM\Projecto_Final\obj\Debug\ProjectoFinal.Remove.resources
+D:\#Estudos\POO\OOP_Project_TIWM\Projecto_Final\obj\Debug\ProjectoFinal.Manage.resources
+D:\#Estudos\POO\OOP_Project_TIWM\Projecto_Final\obj\Debug\ProjectoFinal.Menu.resources
+D:\#Estudos\POO\OOP_Project_TIWM\Projecto_Final\obj\Debug\ProjectoFinal.Modify.resources
+D:\#Estudos\POO\OOP_Project_TIWM\Projecto_Final\obj\Debug\ProjectoFinal.CreateClient.resources
+D:\#Estudos\POO\OOP_Project_TIWM\Projecto_Final\obj\Debug\ProjectoFinal.CreateProduct.resources
+D:\#Estudos\POO\OOP_Project_TIWM\Projecto_Final\obj\Debug\ProjectoFinal.ManageProducts.resources
+D:\#Estudos\POO\OOP_Project_TIWM\Projecto_Final\obj\Debug\ProjectoFinal.ModifyProduct.resources
+D:\#Estudos\POO\OOP_Project_TIWM\Projecto_Final\obj\Debug\ProjectoFinal.RemoveProduct.resources

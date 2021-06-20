@@ -11,20 +11,20 @@ using System.Windows.Forms;
 
 namespace ProjectoFinal
 {
-    public partial class Remove : Form
+    public partial class RemoveProduct : Form
     {
-        public Remove()
+        public RemoveProduct()
         {
             InitializeComponent();
-            StreamReader sr = new StreamReader("Clientes.txt");
+            StreamReader sr = new StreamReader("Produtos.txt");
             string linha = sr.ReadLine();
             string[] auxLinha;
 
             while (linha != null)
             {
-                auxLinha = linha.Split(';');
+                auxLinha = linha.Split('|');
 
-                comboBox_Cliente.Items.Add(new Cliente(int.Parse(auxLinha[0]), auxLinha[1], auxLinha[2], auxLinha[3], int.Parse(auxLinha[4]), int.Parse(auxLinha[5]), int.Parse(auxLinha[6])));
+                comboBox_Produto.Items.Add(new Games(auxLinha[0], auxLinha[1], double.Parse(auxLinha[2])));
 
                 linha = sr.ReadLine();
             }
@@ -39,15 +39,15 @@ namespace ProjectoFinal
         private void button_Delete_Click(object sender, EventArgs e)
         {
 
-            if (comboBox_Cliente.SelectedItem != null)
+            if (comboBox_Produto.SelectedItem != null)
             {
-                DialogResult perguntaR = MessageBox.Show("Tem a certeza que quere remover este cliente?", "Confirmação", MessageBoxButtons.YesNo);
-                StreamReader sr = new StreamReader("Clientes.txt");
+                DialogResult perguntaR = MessageBox.Show("Tem a certeza que quere remover este produto?", "Confirmação", MessageBoxButtons.YesNo);
+                StreamReader sr = new StreamReader("Produtos.txt");
                 string linha = sr.ReadLine();
-                Cliente c = comboBox_Cliente.SelectedItem as Cliente;
+                Games g = comboBox_Produto.SelectedItem as Games;
                 if (perguntaR == DialogResult.Yes)
                 {
-                    string strLineToDelete = c.GetID().ToString();
+                    string strLineToDelete = g.GetUID().ToString();
                     string strSearchText = strLineToDelete;
                     string strOldText;
                     string n = "";
@@ -60,7 +60,7 @@ namespace ProjectoFinal
                         linha = sr.ReadLine();
                     }
                     sr.Close();
-                    File.WriteAllText("Clientes.txt", n);
+                    File.WriteAllText("Produtos.txt", n);
                     this.Close();
                 }
                 else if (perguntaR == DialogResult.No)

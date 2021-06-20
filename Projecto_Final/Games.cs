@@ -59,9 +59,13 @@ namespace ProjectoFinal
             return preco;
         }
 
+        public string TextoGameFile()
+        {
+            return UID + "|" + nome + "|" + preco;
+        }
         public override string ToString()
         {
-            return nome + " - " + preco + " €";
+            return UID + "-" + nome + " - " + preco + " €";
         }
     }
 }

@@ -1,14 +1,10 @@
-1|Game1|21.3
-2|Game1|21.3
-3|Game1|21.3
-4|Game1|21.3
-5|Game1|21.3
-6|Game1|21.3
-7|Game1|21.3
-8|Game1|21.3
-9|Game1|21.3
-10|Game1|21.3
-11|Game1|21.3
-12|Game1|21.3
-13|Game1|21.3
-14|Game1|21.3
+AW2|CSGO|12.99
+GE3|HL2|9.99
+EG6|CS:S|9.99
+CFH3|CS1.6|4.99
+AW7F|HL1|9.99
+GHW4|Portal|9.99
+HJ4|Portal 2|15.99
+KJ85|FFXIV Online|9.99
+GH45|GMOD 14|14.99
+MSFH4|Forza Horizon 4|59.99

@@ -16,7 +16,7 @@ namespace ProjectoFinal
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Add());
+            Application.Run(new Menu());
         }
     }
 }

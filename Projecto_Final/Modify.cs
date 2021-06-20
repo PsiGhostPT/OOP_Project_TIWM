@@ -11,9 +11,9 @@ using System.IO;
 
 namespace ProjectoFinal
 {
-    public partial class FormCM : Form
+    public partial class Modify : Form
     {
-        public FormCM()
+        public Modify()
         {
             InitializeComponent();
 
@@ -71,25 +71,11 @@ namespace ProjectoFinal
 
         private void buttonGuardar_Click(object sender, EventArgs e)
         {
-            StreamReader sr = new StreamReader("Clientes.txt");
-            string linha = sr.ReadLine();
-            string[] auxLinha;
-
-            while (linha != null)
-            {
-                auxLinha = linha.Split(';');
-                if(textBoxID.Text == auxLinha[0])
-                {
-                    linha.Replace(auxLinha[1], textBoxNome.Text);
-                    sr.Close();
-                    StreamWriter sw = new StreamWriter("Clientes.txt", true);
-                    sw.WriteLine()
-                }
-                linha = sr.ReadLine();
-            }
-            sr.Close();
-
-
+            
+            Cliente c = comboBox_Cliente.SelectedItem as Cliente;
+            string fileName = "Clientes.txt";
+            File.WriteAllText(fileName, File.ReadAllText(fileName).Replace(c.GetID() + ";" + c.GetNome() + ";" + c.GetEmail() + ";" + c.GetCidade() + ";" + c.GetDataNasc().GetDia().ToString() + ";" + c.GetDataNasc().GetMes().ToString() + ";" + c.GetDataNasc().GetAno().ToString(), c.GetID() + ";" + textBoxNome.Text + ";" + textBoxEmail.Text + ";" + textBoxCidade.Text + ";" + dateTimePicker1.Value.Day + ";" + dateTimePicker1.Value.Month + ";" + dateTimePicker1.Value.Year));
+            //dateTimePicker1.Value.Day | dateTimePicker1.Value.Month | dateTimePicker1.Value.Year
             this.Close();
         }
 

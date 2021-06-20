@@ -11,15 +11,15 @@ using System.IO;
 
 namespace ProjectoFinal
 {
-    public partial class Add : Form
+    public partial class Manage : Form
     {
-        public Add()
+        public Manage()
         {
             InitializeComponent();
         }
 
         
-        private void Add_Load(object sender, EventArgs e)
+        private void Manage_Load(object sender, EventArgs e)
         {
             StreamReader sr = new StreamReader("Produtos.txt");
             string linha = sr.ReadLine();
@@ -64,7 +64,7 @@ namespace ProjectoFinal
 
         private void adicionarClienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormC f = new FormC(1);
+            CreateClient f = new CreateClient();
             f.Show();
         }
 
@@ -82,8 +82,6 @@ namespace ProjectoFinal
         public void AtualizarValorCarrinho()
         {
             double valor = 0;
-            double valorDeconto = 0;
-
             panelCBCliente.BackColor = Color.Transparent;
 
             foreach (Games g in listBoxCarrinho.Items)
@@ -135,14 +133,61 @@ namespace ProjectoFinal
         }
 
         private void button_submit_Click(object sender, EventArgs e)
-        {  
+        {
+            Cliente c = comboBoxClie.SelectedItem as Cliente;
 
+            string path = "bilioteca" + c.GetID() + ".txt";
+            if (!File.Exists(path))
+            {
+                StreamWriter tw = File.CreateText(path);
+
+                foreach (Games g in listBoxCarrinho.Items)
+                {
+                    string factMessage = "biblioteca" + c.GetID() + ".txt";
+                    bool containsSearchResult = factMessage.Contains(g.GetUID());
+
+                    if (containsSearchResult)
+                    {
+                        MessageBox.Show("Este produto já se encontra na sua biblioteca");
+                    }
+                    else
+                    {
+                        tw.WriteLine(g.GetUID() + "|" + g.GetNome() + "|" + g.GetPreco());
+                    }
+                }
+                tw.Close();
+            }
+            else if (File.Exists(path))
+            {
+                using (var tw = new StreamWriter(path, true))
+                {
+                    int numjogos = listBoxCarrinho.Items.Count;
+
+                    foreach (Games g in listBoxCarrinho.Items)
+                    {
+                        string factMessage = "biblioteca" + c.GetID() + ".txt";
+                        bool containsSearchResult = factMessage.Contains(g.GetUID());
+
+                        if (containsSearchResult)
+                        {
+                            MessageBox.Show("Este produto já se encontra na sua biblioteca");
+                        }
+                        else
+                        {
+                            tw.WriteLine(g.GetUID() + "|" + g.GetNome() + "|" + g.GetPreco());
+                        }
+                    }
+                    tw.Close();
+                }
+                listBoxCarrinho.Items.Clear();
+                comboBoxClie.Text = "";
+            }
 
         }
 
         private void modificarClientToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormCM fm = new FormCM();
+            Modify fm = new Modify();
             fm.Show();
         }
 
@@ -168,6 +213,11 @@ namespace ProjectoFinal
                 linha = sr.ReadLine();
             }
             sr.Close();
+        }
+
+        private void sairToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

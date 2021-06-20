@@ -1,6 +1,6 @@
 ﻿namespace ProjectoFinal
 {
-    partial class Add
+    partial class Manage
     {
         /// <summary>
         /// Required designer variable.
@@ -51,6 +51,7 @@
             this.button1 = new System.Windows.Forms.Button();
             this.button_submit = new System.Windows.Forms.Button();
             this.button_update = new System.Windows.Forms.Button();
+            this.sairToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -72,7 +73,8 @@
             this.userToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.adicionarClienteToolStripMenuItem,
             this.modificarClientToolStripMenuItem,
-            this.removerClientToolStripMenuItem});
+            this.removerClientToolStripMenuItem,
+            this.sairToolStripMenuItem});
             this.userToolStripMenuItem.Name = "userToolStripMenuItem";
             this.userToolStripMenuItem.Size = new System.Drawing.Size(42, 20);
             this.userToolStripMenuItem.Text = "User";
@@ -80,22 +82,22 @@
             // adicionarClienteToolStripMenuItem
             // 
             this.adicionarClienteToolStripMenuItem.Name = "adicionarClienteToolStripMenuItem";
-            this.adicionarClienteToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.adicionarClienteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.adicionarClienteToolStripMenuItem.Text = "Adicionar Cliente";
             this.adicionarClienteToolStripMenuItem.Click += new System.EventHandler(this.adicionarClienteToolStripMenuItem_Click);
             // 
             // modificarClientToolStripMenuItem
             // 
             this.modificarClientToolStripMenuItem.Name = "modificarClientToolStripMenuItem";
-            this.modificarClientToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.modificarClientToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.modificarClientToolStripMenuItem.Text = "Modificar Client";
             this.modificarClientToolStripMenuItem.Click += new System.EventHandler(this.modificarClientToolStripMenuItem_Click);
             // 
             // removerClientToolStripMenuItem
             // 
             this.removerClientToolStripMenuItem.Name = "removerClientToolStripMenuItem";
-            this.removerClientToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
-            this.removerClientToolStripMenuItem.Text = "Remover Client";
+            this.removerClientToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.removerClientToolStripMenuItem.Text = "Remover Cliente";
             this.removerClientToolStripMenuItem.Click += new System.EventHandler(this.removerClientToolStripMenuItem_Click);
             // 
             // aboutToolStripMenuItem
@@ -251,7 +253,14 @@
             this.button_update.UseVisualStyleBackColor = true;
             this.button_update.Click += new System.EventHandler(this.button_update_Click);
             // 
-            // Add
+            // sairToolStripMenuItem
+            // 
+            this.sairToolStripMenuItem.Name = "sairToolStripMenuItem";
+            this.sairToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.sairToolStripMenuItem.Text = "Sair";
+            this.sairToolStripMenuItem.Click += new System.EventHandler(this.sairToolStripMenuItem_Click);
+            // 
+            // Manage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -270,9 +279,9 @@
             this.Controls.Add(this.label2);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "Add";
-            this.Text = "Form1";
-            this.Load += new System.EventHandler(this.Add_Load);
+            this.Name = "Manage";
+            this.Text = "Gerir Cliente";
+            this.Load += new System.EventHandler(this.Manage_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.contextMenuStrip1.ResumeLayout(false);
@@ -307,6 +316,7 @@
         private System.Windows.Forms.ToolStripMenuItem modificarClientToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem removerClientToolStripMenuItem;
         private System.Windows.Forms.Button button_update;
+        private System.Windows.Forms.ToolStripMenuItem sairToolStripMenuItem;
     }
 }
 
