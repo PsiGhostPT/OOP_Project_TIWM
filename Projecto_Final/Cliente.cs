@@ -14,8 +14,9 @@ namespace ProjectoFinal
         {
             produtosFav = new List<Games>();
         }
-        public Cliente(string nNome, string nEmail, string nCidade, int nDia, int nMes, int nAno)
+        public Cliente(int nID,string nNome, string nEmail, string nCidade, int nDia, int nMes, int nAno)
         {
+            SetID(nID);
             SetNome(nNome);
             SetEmail(nEmail);
             SetCidade(nCidade);
@@ -34,11 +35,11 @@ namespace ProjectoFinal
 
         public string TextoFicheiro()
         {
-            return GetNome() + ";" + GetEmail() + ";" + GetCidade() + ";" + GetDataNasc().GetDia().ToString() + ";" + GetDataNasc().GetMes().ToString() + ";" + GetDataNasc().GetAno().ToString() + ";" + GetProdutosFav().ToString();
+            return GetID() + ";" + GetNome() + ";" + GetEmail() + ";" + GetCidade() + ";" + GetDataNasc().GetDia().ToString() + ";" + GetDataNasc().GetMes().ToString() + ";" + GetDataNasc().GetAno().ToString();
         }
         public override string ToString()
         {
-            return GetNome();
+            return GetID() + " - " + GetNome();
         }
     }
 }

@@ -28,8 +28,8 @@ namespace ProjectoFinal
 
         private void buttonGuardar_Click(object sender, EventArgs e)
         {
-
-            Cliente c = new Cliente(textBoxNome.Text, textBoxEmail.Text, textBoxCidade.Text, dateTimePicker1.Value.Day, dateTimePicker1.Value.Month, dateTimePicker1.Value.Year);
+            
+            Cliente c = new Cliente(int.Parse(textBox_ID.Text),textBoxNome.Text, textBoxEmail.Text, textBoxCidade.Text, dateTimePicker1.Value.Day, dateTimePicker1.Value.Month, dateTimePicker1.Value.Year);
             StreamWriter sw = new StreamWriter("Clientes.txt",true);
             sw.WriteLine(c.TextoFicheiro());
             sw.Close();

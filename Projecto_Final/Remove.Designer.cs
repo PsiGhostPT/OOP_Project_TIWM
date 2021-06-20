@@ -1,7 +1,7 @@
 ﻿
 namespace ProjectoFinal
 {
-    partial class Show
+    partial class Remove
     {
         /// <summary>
         /// Required designer variable.
@@ -29,26 +29,18 @@ namespace ProjectoFinal
         /// </summary>
         private void InitializeComponent()
         {
-            this.listBox1 = new System.Windows.Forms.ListBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.listBox2 = new System.Windows.Forms.ListBox();
-            this.label2 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.menuStrip3 = new System.Windows.Forms.MenuStrip();
             this.menuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.comboBox_Cliente = new System.Windows.Forms.ComboBox();
+            this.button_Cancel = new System.Windows.Forms.Button();
+            this.button_Delete = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.menuStrip3.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // listBox1
-            // 
-            this.listBox1.FormattingEnabled = true;
-            this.listBox1.Location = new System.Drawing.Point(12, 51);
-            this.listBox1.Name = "listBox1";
-            this.listBox1.Size = new System.Drawing.Size(258, 368);
-            this.listBox1.TabIndex = 0;
             // 
             // label1
             // 
@@ -59,30 +51,13 @@ namespace ProjectoFinal
             this.label1.TabIndex = 1;
             this.label1.Text = "Clientes:";
             // 
-            // listBox2
-            // 
-            this.listBox2.FormattingEnabled = true;
-            this.listBox2.Location = new System.Drawing.Point(435, 51);
-            this.listBox2.Name = "listBox2";
-            this.listBox2.Size = new System.Drawing.Size(258, 368);
-            this.listBox2.TabIndex = 2;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(432, 21);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(88, 13);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "Itens comprados:";
-            // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripMenuItem1});
             this.menuStrip1.Location = new System.Drawing.Point(0, 48);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(293, 24);
             this.menuStrip1.TabIndex = 4;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -95,7 +70,7 @@ namespace ProjectoFinal
             // 
             this.menuStrip2.Location = new System.Drawing.Point(0, 24);
             this.menuStrip2.Name = "menuStrip2";
-            this.menuStrip2.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip2.Size = new System.Drawing.Size(293, 24);
             this.menuStrip2.TabIndex = 5;
             this.menuStrip2.Text = "menuStrip2";
             // 
@@ -105,7 +80,7 @@ namespace ProjectoFinal
             this.menuToolStripMenuItem});
             this.menuStrip3.Location = new System.Drawing.Point(0, 0);
             this.menuStrip3.Name = "menuStrip3";
-            this.menuStrip3.Size = new System.Drawing.Size(800, 24);
+            this.menuStrip3.Size = new System.Drawing.Size(293, 24);
             this.menuStrip3.TabIndex = 6;
             this.menuStrip3.Text = "menuStrip3";
             // 
@@ -115,20 +90,48 @@ namespace ProjectoFinal
             this.menuToolStripMenuItem.Size = new System.Drawing.Size(50, 20);
             this.menuToolStripMenuItem.Text = "Menu";
             // 
-            // Show
+            // comboBox_Cliente
+            // 
+            this.comboBox_Cliente.FormattingEnabled = true;
+            this.comboBox_Cliente.Location = new System.Drawing.Point(62, 32);
+            this.comboBox_Cliente.Name = "comboBox_Cliente";
+            this.comboBox_Cliente.Size = new System.Drawing.Size(197, 21);
+            this.comboBox_Cliente.TabIndex = 7;
+            // 
+            // button_Cancel
+            // 
+            this.button_Cancel.Location = new System.Drawing.Point(50, 75);
+            this.button_Cancel.Name = "button_Cancel";
+            this.button_Cancel.Size = new System.Drawing.Size(75, 23);
+            this.button_Cancel.TabIndex = 8;
+            this.button_Cancel.Text = "Cancelar";
+            this.button_Cancel.UseVisualStyleBackColor = true;
+            this.button_Cancel.Click += new System.EventHandler(this.button_Cancel_Click);
+            // 
+            // button_Delete
+            // 
+            this.button_Delete.Location = new System.Drawing.Point(154, 75);
+            this.button_Delete.Name = "button_Delete";
+            this.button_Delete.Size = new System.Drawing.Size(75, 23);
+            this.button_Delete.TabIndex = 9;
+            this.button_Delete.Text = "Eliminar";
+            this.button_Delete.UseVisualStyleBackColor = true;
+            this.button_Delete.Click += new System.EventHandler(this.button_Delete_Click);
+            // 
+            // Remove
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.label2);
-            this.Controls.Add(this.listBox2);
+            this.ClientSize = new System.Drawing.Size(293, 122);
+            this.Controls.Add(this.button_Delete);
+            this.Controls.Add(this.button_Cancel);
+            this.Controls.Add(this.comboBox_Cliente);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.listBox1);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.menuStrip2);
             this.Controls.Add(this.menuStrip3);
             this.MainMenuStrip = this.menuStrip1;
-            this.Name = "Show";
+            this.Name = "Remove";
             this.Text = "Form2";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -140,15 +143,14 @@ namespace ProjectoFinal
         }
 
         #endregion
-
-        private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ListBox listBox2;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.MenuStrip menuStrip2;
         private System.Windows.Forms.MenuStrip menuStrip3;
         private System.Windows.Forms.ToolStripMenuItem menuToolStripMenuItem;
+        private System.Windows.Forms.ComboBox comboBox_Cliente;
+        private System.Windows.Forms.Button button_Cancel;
+        private System.Windows.Forms.Button button_Delete;
     }
 }

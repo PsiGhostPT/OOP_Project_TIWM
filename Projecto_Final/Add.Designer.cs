@@ -32,6 +32,8 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.userToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.adicionarClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modificarClientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.removerClientToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.comboBoxClie = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -48,6 +50,7 @@
             this.panelCBCliente = new System.Windows.Forms.Panel();
             this.button1 = new System.Windows.Forms.Button();
             this.button_submit = new System.Windows.Forms.Button();
+            this.button_update = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.contextMenuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
@@ -67,7 +70,9 @@
             // userToolStripMenuItem
             // 
             this.userToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.adicionarClienteToolStripMenuItem});
+            this.adicionarClienteToolStripMenuItem,
+            this.modificarClientToolStripMenuItem,
+            this.removerClientToolStripMenuItem});
             this.userToolStripMenuItem.Name = "userToolStripMenuItem";
             this.userToolStripMenuItem.Size = new System.Drawing.Size(42, 20);
             this.userToolStripMenuItem.Text = "User";
@@ -75,9 +80,23 @@
             // adicionarClienteToolStripMenuItem
             // 
             this.adicionarClienteToolStripMenuItem.Name = "adicionarClienteToolStripMenuItem";
-            this.adicionarClienteToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.adicionarClienteToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
             this.adicionarClienteToolStripMenuItem.Text = "Adicionar Cliente";
             this.adicionarClienteToolStripMenuItem.Click += new System.EventHandler(this.adicionarClienteToolStripMenuItem_Click);
+            // 
+            // modificarClientToolStripMenuItem
+            // 
+            this.modificarClientToolStripMenuItem.Name = "modificarClientToolStripMenuItem";
+            this.modificarClientToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.modificarClientToolStripMenuItem.Text = "Modificar Client";
+            this.modificarClientToolStripMenuItem.Click += new System.EventHandler(this.modificarClientToolStripMenuItem_Click);
+            // 
+            // removerClientToolStripMenuItem
+            // 
+            this.removerClientToolStripMenuItem.Name = "removerClientToolStripMenuItem";
+            this.removerClientToolStripMenuItem.Size = new System.Drawing.Size(165, 22);
+            this.removerClientToolStripMenuItem.Text = "Remover Client";
+            this.removerClientToolStripMenuItem.Click += new System.EventHandler(this.removerClientToolStripMenuItem_Click);
             // 
             // aboutToolStripMenuItem
             // 
@@ -90,7 +109,7 @@
             // 
             this.comboBoxClie.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxClie.FormattingEnabled = true;
-            this.comboBoxClie.Location = new System.Drawing.Point(25, 59);
+            this.comboBoxClie.Location = new System.Drawing.Point(20, 113);
             this.comboBoxClie.Name = "comboBoxClie";
             this.comboBoxClie.Size = new System.Drawing.Size(336, 28);
             this.comboBoxClie.TabIndex = 4;
@@ -100,7 +119,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(23, 31);
+            this.label2.Location = new System.Drawing.Point(16, 84);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(62, 20);
             this.label2.TabIndex = 3;
@@ -111,7 +130,7 @@
             this.listBoxProdutos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.listBoxProdutos.FormattingEnabled = true;
             this.listBoxProdutos.ItemHeight = 20;
-            this.listBoxProdutos.Location = new System.Drawing.Point(27, 134);
+            this.listBoxProdutos.Location = new System.Drawing.Point(27, 181);
             this.listBoxProdutos.Name = "listBoxProdutos";
             this.listBoxProdutos.Size = new System.Drawing.Size(336, 404);
             this.listBoxProdutos.TabIndex = 5;
@@ -148,7 +167,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(21, 111);
+            this.label3.Location = new System.Drawing.Point(23, 158);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(77, 20);
             this.label3.TabIndex = 7;
@@ -197,7 +216,7 @@
             // 
             // panelCBCliente
             // 
-            this.panelCBCliente.Location = new System.Drawing.Point(20, 52);
+            this.panelCBCliente.Location = new System.Drawing.Point(17, 107);
             this.panelCBCliente.Name = "panelCBCliente";
             this.panelCBCliente.Size = new System.Drawing.Size(346, 41);
             this.panelCBCliente.TabIndex = 11;
@@ -222,13 +241,24 @@
             this.button_submit.UseVisualStyleBackColor = true;
             this.button_submit.Click += new System.EventHandler(this.button_submit_Click);
             // 
+            // button_update
+            // 
+            this.button_update.Location = new System.Drawing.Point(12, 33);
+            this.button_update.Name = "button_update";
+            this.button_update.Size = new System.Drawing.Size(75, 23);
+            this.button_update.TabIndex = 14;
+            this.button_update.Text = "Atualizar";
+            this.button_update.UseVisualStyleBackColor = true;
+            this.button_update.Click += new System.EventHandler(this.button_update_Click);
+            // 
             // Add
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(754, 614);
-            this.Controls.Add(this.button_submit);
+            this.Controls.Add(this.button_update);
             this.Controls.Add(this.comboBoxClie);
+            this.Controls.Add(this.button_submit);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.panelCBCliente);
             this.Controls.Add(this.statusStrip1);
@@ -274,6 +304,9 @@
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem removerToolStripMenuItem;
         private System.Windows.Forms.Button button_submit;
+        private System.Windows.Forms.ToolStripMenuItem modificarClientToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem removerClientToolStripMenuItem;
+        private System.Windows.Forms.Button button_update;
     }
 }
 

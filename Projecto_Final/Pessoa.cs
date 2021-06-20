@@ -8,6 +8,7 @@ namespace ProjectoFinal
 {
     class Pessoa
     {
+        private int ID;
         private string nome;
         private string email;
         private string cidade;
@@ -15,24 +16,35 @@ namespace ProjectoFinal
 
         public Pessoa()
         {
+            ID = 0;
             nome = "";
             email = "";
             cidade = "";
             dataNasc = new Data();
         }
-        public Pessoa(string nNome, string nEmail, string nCidade, Data nDataNAsc)
+        public Pessoa(int nID,string nNome, string nEmail, string nCidade, Data nDataNAsc)
         {
+            ID = nID;
             nome = nNome;
             email = nEmail;
             cidade = nCidade;
             dataNasc = nDataNAsc;
         }
-        public Pessoa(string nNome, string nEmail, string nCidade, int nDia, int nMes, int nAno)
+        public Pessoa(int nID,string nNome, string nEmail, string nCidade, int nDia, int nMes, int nAno)
         {
+            ID = nID;
             nome = nNome;
             email = nEmail;
             cidade = nCidade;
             dataNasc = new Data(nDia, nMes, nAno);
+        }
+        public int GetID()
+        {
+            return ID;
+        }
+        public void SetID(int nID)
+        {
+            ID = nID;
         }
         public string GetNome()
         {
@@ -94,7 +106,7 @@ namespace ProjectoFinal
 
         public string ExportarFich()
         {
-            return nome + "/" + email + "/" + cidade + "/" + dataNasc;
+            return ID + "/" + nome + "/" + email + "/" + cidade + "/" + dataNasc;
         }
 
         public override string ToString()

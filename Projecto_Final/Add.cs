@@ -18,6 +18,7 @@ namespace ProjectoFinal
             InitializeComponent();
         }
 
+        
         private void Add_Load(object sender, EventArgs e)
         {
             StreamReader sr = new StreamReader("Produtos.txt");
@@ -41,7 +42,7 @@ namespace ProjectoFinal
             {
                 auxLinha = linha.Split(';');
 
-                comboBoxClie.Items.Add(new Cliente(auxLinha[0], auxLinha[1], auxLinha[2], int.Parse(auxLinha[3]), int.Parse(auxLinha[4]), int.Parse(auxLinha[5], auxLinha[6])));
+                comboBoxClie.Items.Add(new Cliente(int.Parse(auxLinha[0]), auxLinha[1], auxLinha[2], auxLinha[3], int.Parse(auxLinha[4]), int.Parse(auxLinha[5]), int.Parse(auxLinha[6])));
 
                 linha = sr.ReadLine();
             }
@@ -137,6 +138,36 @@ namespace ProjectoFinal
         {  
 
 
+        }
+
+        private void modificarClientToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormCM fm = new FormCM();
+            fm.Show();
+        }
+
+        private void removerClientToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Remove fr = new Remove();
+            fr.Show();
+        }
+
+        private void button_update_Click(object sender, EventArgs e)
+        {
+            comboBoxClie.Items.Clear();
+
+            StreamReader sr = new StreamReader("Clientes.txt");
+            string linha = sr.ReadLine();
+            string[] auxLinha;
+
+            while (linha != null)
+            {
+                auxLinha = linha.Split(';');
+
+                comboBoxClie.Items.Add(new Cliente(int.Parse(auxLinha[0]), auxLinha[1], auxLinha[2], auxLinha[3], int.Parse(auxLinha[4]), int.Parse(auxLinha[5]), int.Parse(auxLinha[6])));
+                linha = sr.ReadLine();
+            }
+            sr.Close();
         }
     }
 }

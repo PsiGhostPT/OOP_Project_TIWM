@@ -15,3 +15,5 @@ D:\#Estudos\POO\OOP_Project_TIWM\Projecto_Final\obj\Debug\ProjectoFinal.Add.reso
 D:\#Estudos\POO\OOP_Project_TIWM\Projecto_Final\obj\Debug\ProjectoFinal.Show.resources
 D:\#Estudos\POO\OOP_Project_TIWM\Projecto_Final\obj\Debug\ProjectoFinal.FormC.resources
 D:\#Estudos\POO\OOP_Project_TIWM\Projecto_Final\obj\Debug\ProjectoFinal.Form1.resources
+D:\#Estudos\POO\OOP_Project_TIWM\Projecto_Final\obj\Debug\ProjectoFinal.FormCM.resources
+D:\#Estudos\POO\OOP_Project_TIWM\Projecto_Final\obj\Debug\ProjectoFinal.Remove.resources
